@@ -77,7 +77,7 @@ export const validators: Record<TValidationRuleType, TValidator> = {
       const typedParams = params as TValidationRuleParamsMinLength;
       // Skip validation if value is not a string or is empty
       if (typeof value !== "string" || value === "") {
-        return { valid: true };
+        return { valid: false };
       }
       return { valid: value.length >= typedParams.min };
     },
